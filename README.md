@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌊 CoinStream – Real-Time Crypto Analytics Terminal
 
-## Getting Started
+CoinStream is a **real-time cryptocurrency analytics dashboard** built with React and TypeScript, focused on streaming live crypto market data with **sub-second updates** using **CoinGecko’s REST and WebSocket APIs**.
 
-First, run the development server:
+The project was **inspired by a YouTube tutorial**, but designed and implemented independently, with custom architecture decisions, UI changes, and several **vibecoded components** to make the experience unique.
+
+---
+
+## ✨ Features
+
+- 🌍 Global cryptocurrency market statistics
+- 📈 Real-time price streaming via WebSocket
+- 🔥 Trending tokens discovery
+- 📊 Top gainers & losers
+- 🔍 Searchable cryptocurrency market table
+- 🪙 Detailed token pages
+  - Live price updates
+  - Candlestick / OHLC charts
+  - Exchange & market data
+- 🔄 Crypto price converter with multi-currency support
+- ⛓️ Live on-chain trades streamed in real time
+
+---
+
+## 🧠 What I Learned
+
+- Working with **real-time WebSocket data** in frontend applications
+- Fetching and structuring market data using **CoinGecko REST APIs**
+- Building scalable, component-driven UIs in **React + TypeScript**
+- Optimizing UI updates for high-frequency streaming data
+- Designing reusable and expressive **vibecoded UI components**
+- Handling charts, live feeds, and performance considerations
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + TypeScript
+- **Styling:** (Tailwind CSS / CSS Modules / Styled Components)
+- **Charts:** (Lightweight Charts / Chart.js / Recharts)
+- **APIs:**
+  - CoinGecko REST API
+  - CoinGecko WebSocket API
+
+---
+
+## 🌱 Inspiration & Credits
+
+CoinStream was **inspired by a YouTube tutorial** exploring how to build a real-time crypto analytics platform using CoinGecko APIs.
+
+The final implementation, structure, UI, and added features were **independently developed and extended** beyond the original walkthrough.
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
