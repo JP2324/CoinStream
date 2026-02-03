@@ -8,7 +8,7 @@ import { fetcher } from '@/lib/coingecko.actions'
 import CoinOverview from '@/components/home/CoinOverview'
 import TrendingCoin from '@/components/home/TrendingCoin'
 import { CoinOverviewFallback, TrendingCoinsFallback } from '@/components/home/fallback'
-
+import Categories from '@/components/home/Categories'
 
 
 /*
@@ -79,7 +79,9 @@ const page = async () => {
     </section>
 
     <section className='w-full mt-7 space-y-4'>
-      <p>Categories</p>
+      <Suspense fallback={<div>Loading Table...</div>}>
+      <Categories></Categories>
+      </Suspense>
     </section>
   </main>
   )
