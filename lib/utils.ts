@@ -38,6 +38,37 @@ export function formatPercentage(change: number | null | undefined): string {
   return `${formattedChange}%`;
 }
 
+export function formatPrice(value: number | null | undefined): string {
+  if (value === null || value === undefined || isNaN(value)) {
+    return '$0.00';
+  }
+
+  // For large numbers (market cap), use abbreviations
+  if (value >= 1_000_000_000_000) {
+    return `$${(value / 1_000_000_000_000).toFixed(2)}T`;
+  }
+  if (value >= 1_000_000_000) {
+    return `$${(value / 1_000_000_000).toFixed(2)}B`;
+  }
+  if (value >= 1_000_000) {
+    return `$${(value / 1_000_000).toFixed(2)}M`;
+  }
+  if (value >= 1_000) {
+    return `$${(value / 1_000).toFixed(2)}K`;
+  }
+
+  // For small prices, show more decimal places
+  if (value < 0.01) {
+    return `$${value.toFixed(6)}`;
+  }
+  if (value < 1) {
+    return `$${value.toFixed(4)}`;
+  }
+
+  // Standard price formatting
+  return `$${value.toFixed(2)}`;
+}
+
 export function trendingClasses(value: number) {
   const isTrendingUp = value > 0;
 
