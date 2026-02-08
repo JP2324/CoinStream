@@ -37,12 +37,12 @@ const TrendingCoin = async () => {
                 return (
                     <div className={cn('price-change', isTrendingUp ? 'text-green-500' : 'text-red-500')}>
                         <p className='flex items-center gap-1'>
-                        {isTrendingUp ? (
-                            <TrendingUp width={16} height={16} />
-                        ) : (
-                            <TrendingDown width={16} height={16} />
-                        )}
-                        {formatPercentage(item.data.price_change_percentage_24h.usd)}
+                            {isTrendingUp ? (
+                                <TrendingUp width={16} height={16} />
+                            ) : (
+                                <TrendingDown width={16} height={16} />
+                            )}
+                            {formatPercentage(item.data.price_change_percentage_24h.usd)}
                         </p>
                     </div>
                 )
@@ -54,18 +54,14 @@ const TrendingCoin = async () => {
                 coin.item.data.price
         }]
     return (
-        <div id='trending-coin'>
+        <div id='trending-coins'>
             <h4>Trending Coins</h4>
-            <div id='trending-coin'>
             <DataTable
-                data={trendingCoins.coins.slice(0,6) || []}
+                data={trendingCoins.coins.slice(0, 6) || []}
                 columns={columns}
                 rowKey={(coin) => coin.item.id}
-                tableClassName='trending-coins-table' 
-                headerCellClassName = "py-3!"
-                bodyCellClassName='py-2!'
-                />
-            </div>
+                tableClassName='trending-coins-table'
+            />
         </div>
     )
 }
